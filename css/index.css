@@ -287,8 +287,6 @@ body{
 	box-shadow: 0 2px 1px 1px rgba(0,0,0,.1);
 	opacity: 1;
 }
-
-
 /*banner*/
 .banner{
 	width: 1226px;
@@ -299,6 +297,7 @@ body{
 .banner .banner_content ul:first-child{
 	height: 460px;
 	overflow: hidden;
+	position: relative;
 }
 .banner .banner_content div{
 	position: absolute;
@@ -353,10 +352,17 @@ body{
 .banner .banner_content .banner_btn_right:hover{
 	background: url(../img/btn_rl.png)no-repeat -42px 50%;
 }
-.banner .banner_content ul li{
-	float: left;
+.bannerImg{
+	position: absolute;
+	top:0;
+	left: 0;
 	width: 100%;
 	height: 460px;
+	opacity:0;
+	transition: 1s;
+}
+.imgActive{
+	opacity:1;
 }
 .banner .banner_content ul li a{
 	width: 100%;
@@ -688,10 +694,10 @@ body{
 	top: 24px;
 	right: 0;
 }
-.star_product .title .btn a:first-child{
+.star_product .title .btn i:first-child,.home .title .btn i:first-child{
 	color:#e0e0e0;
 }
-.star_product .title .btn a{
+.star_product .title .btn i,.home .title .btn i{
 	float: left;
 	width: 24px;
 	height: 16px;
@@ -703,6 +709,7 @@ body{
 	text-align: center;
 	font-weight: 800;
 	color: #b0b0b0;
+	cursor: pointer;
 }
 .star_product .product{
 	width: 234px;
@@ -713,6 +720,7 @@ body{
 	overflow: hidden;
 	padding-bottom: 40px;
 	width: 200%;
+	transition: all 1s;
 }
 .star_product .content .product{
 	background: #fafafa;
@@ -1242,9 +1250,7 @@ body{
 .hot_product .content .produ .author{
 	color: #b0b0b0;
 }
-.hot_product .content .produ .price{
-	margin-bottom: 
-}
+
 .hot_product .content .produ .price a{
 	display: inline;
 	color:#000;
@@ -1281,11 +1287,14 @@ body{
 	color:#e0e0e0;
 }
 .home .content_wrap{
+	width: 100%;
 	height: 300px;
 	overflow: hidden;
 }
 .home .content_fiveth{                        
 	padding: 14px 0;
+	overflow: hidden;
+	transition: all 1s;
 }
 .home .content_fiveth .right_product{
 	float: left;
@@ -1392,13 +1401,18 @@ body{
 	color: #ffac13;
 	text-align: center;
 }
+.cont .content .item .con{
+	overflow: hidden;
+}
 .cont .content .item .con ul{
 	width: 400%;
 	overflow: hidden;
+	transition: all 1s;
 }
 .cont .content .item .con ul li{
 	width: 296px;
 	float: left;
+
 }
 .cont .content .item .con ul li:last-child{
 }
@@ -1521,7 +1535,7 @@ body{
 	overflow: hidden;
 	opacity: 0;
 }
-.cont .content .item .btn a{
+.cont .content .item .btn i{
 	width: 20px;
 	height: 48px;
 	line-height: 48px;
@@ -1639,7 +1653,7 @@ body{
 }
 .service{
 	width: 1226px;
-	margin: 0 auto;s
+	margin: 0 auto;
 }
 .service .service_t{
 	border-bottom: 1px solid #e0e0e0;
